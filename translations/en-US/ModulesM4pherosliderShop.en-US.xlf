@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="module" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="06d3aecc98edbb4cb9566d03d551bbb6">
+        <source>carousel</source>
+        <target>carousel</target>
+      </trans-unit>
+      <trans-unit id="c76b85b2de6dce5daf810ed6c8f746ce">
+        <source>Featured offers</source>
+        <target>Featured offers</target>
+      </trans-unit>
+      <trans-unit id="cce250c79a5aff4b609b4f2a764afd65">
+        <source>Pause the slider</source>
+        <target>Pause the slider</target>
+      </trans-unit>
+      <trans-unit id="c08475b3fcd31af7166888bba05abe2c">
+        <source>Play the slider</source>
+        <target>Play the slider</target>
+      </trans-unit>
+      <trans-unit id="e02bd40f5c8fe41d28e4b72550a8bdd5">
+        <source>slide</source>
+        <target>slide</target>
+      </trans-unit>
+      <trans-unit id="ba6b255d0894f09a3c2fa9f326409e49">
+        <source>%number% of %total%</source>
+        <target>%number% of %total%</target>
+      </trans-unit>
+      <trans-unit id="d4e4cb1aa1b4c1f497373b592da71ce9">
+        <source>Slide %number%: %title%</source>
+        <target>Slide %number%: %title%</target>
+      </trans-unit>
+      <trans-unit id="844e665f1e16a2774d4fdf8adfe4c246">
+        <source>Previous slide</source>
+        <target>Previous slide</target>
+      </trans-unit>
+      <trans-unit id="9d636c6a540e6ecb5dfe6b278fc7c110">
+        <source>Next slide</source>
+        <target>Next slide</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

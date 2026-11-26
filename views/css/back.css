@@ -1,0 +1,10 @@
+/*
+ * m4p_heroslider
+ *
+ * @author    Modules4Presta <contact@modules4presta.io>
+ * @copyright 2026 Nice Code sp. z o.o. (Modules4Presta)
+ * @license   https://opensource.org/licenses/MIT MIT License
+ */
+.m4p-hero-admin__thumb { width: 96px; height: 54px; object-fit: cover; border-radius: 3px; }
+.m4p-hero-admin__preview { display: block; max-width: 320px; margin-top: 8px; border-radius: 3px; }
+.m4p-hero-admin__order a { margin-left: 6px; }

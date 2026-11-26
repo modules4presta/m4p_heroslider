@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="module" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="0d533fdf2bb6f988e72bef1faf8fc52c">
+        <source>Hero slider</source>
+        <target>Hero slider</target>
+      </trans-unit>
+      <trans-unit id="75b085b88439390d50a111dc09de6c3c">
+        <source>Full-width home page slider with video and photo slides that advance on their own.</source>
+        <target>Full-width home page slider with video and photo slides that advance on their own.</target>
+      </trans-unit>
+      <trans-unit id="eab5298c60935843cba9e00499c0a9fc">
+        <source>Photo slide time: a number of seconds between 3 and 30.</source>
+        <target>Photo slide time: a number of seconds between 3 and 30.</target>
+      </trans-unit>
+      <trans-unit id="9a7e58ee13cb727cb7c4acc68f4cafe5">
+        <source>Settings saved.</source>
+        <target>Settings saved.</target>
+      </trans-unit>
+      <trans-unit id="23e604833af2fe2b4649e73379bebe80">
+        <source>This slide belongs to another shop.</source>
+        <target>This slide belongs to another shop.</target>
+      </trans-unit>
+      <trans-unit id="5054f2cc77e73e4d4ec90277f5e4a9d4">
+        <source>The video was not saved. Choose an MP4 or WebM file up to %size% MB.</source>
+        <target>The video was not saved. Choose an MP4 or WebM file up to %size% MB.</target>
+      </trans-unit>
+      <trans-unit id="7b4b7758cbdf7c72fb0581a64dac31b0">
+        <source>The photo was not saved. Choose a JPG, PNG or WEBP file up to 8 MB.</source>
+        <target>The photo was not saved. Choose a JPG, PNG or WEBP file up to 8 MB.</target>
+      </trans-unit>
+      <trans-unit id="ad4f80c0d6a4a6e826c29929a65e843b">
+        <source>Add a photo or a video.</source>
+        <target>Add a photo or a video.</target>
+      </trans-unit>
+      <trans-unit id="3a0343b0e27ea10adbf746d8150b2ff2">
+        <source>Fill in the title.</source>
+        <target>Fill in the title.</target>
+      </trans-unit>
+      <trans-unit id="f4f70727dc34561dfde1a3c529b6205c">
+        <source>Settings</source>
+        <target>Settings</target>
+      </trans-unit>
+      <trans-unit id="03c7c0ace395d80182db07ae2c30f034">
+        <source>s</source>
+        <target>s</target>
+      </trans-unit>
+      <trans-unit id="f490974a8acf481ae9e711e26ecf726e">
+        <source>Photo slide time</source>
+        <target>Photo slide time</target>
+      </trans-unit>
+      <trans-unit id="0b6f8c9101e64a715d0555ec530a7059">
+        <source>How long a photo slide stays before the next one. A video slide moves on when the video ends.</source>
+        <target>How long a photo slide stays before the next one. A video slide moves on when the video ends.</target>
+      </trans-unit>
+      <trans-unit id="c9cc8cce247e49bae79f15173ce97354">
+        <source>Save</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="a1921ede72e1b8f5c0a39c77ad1865b4">
+        <source>Shown</source>
+        <target>Shown</target>
+      </trans-unit>
+      <trans-unit id="0664b0f28f80eb28e3b5a79795eb877f">
+        <source>Label above the title</source>
+        <target>Label above the title</target>
+      </trans-unit>
+      <trans-unit id="d0b31d57ec0217bfc703b981ee26e683">
+        <source>One or two words, e.g. "Season".</source>
+        <target>One or two words, e.g. "Season".</target>
+      </trans-unit>
+      <trans-unit id="b78a3223503896721cca1303f776159b">
+        <source>Title</source>
+        <target>Title</target>
+      </trans-unit>
+      <trans-unit id="9dffbf69ffba8bc38bc4e01abf4b1675">
+        <source>Text</source>
+        <target>Text</target>
+      </trans-unit>
+      <trans-unit id="86ef5550e1d19c232d047ec7cd5075a4">
+        <source>Main button text</source>
+        <target>Main button text</target>
+      </trans-unit>
+      <trans-unit id="c789cb8f1c64e5b471cf2feb45e13817">
+        <source>Main button address</source>
+        <target>Main button address</target>
+      </trans-unit>
+      <trans-unit id="a6bf5420ea01956ead7e6ae26ae5f5c0">
+        <source>Second button text</source>
+        <target>Second button text</target>
+      </trans-unit>
+      <trans-unit id="5012751e81f478c80dfa06a76a605337">
+        <source>Optional, an outlined button next to the main one.</source>
+        <target>Optional, an outlined button next to the main one.</target>
+      </trans-unit>
+      <trans-unit id="f2c6dd7251484c27564755ca4fd30bbf">
+        <source>Second button address</source>
+        <target>Second button address</target>
+      </trans-unit>
+      <trans-unit id="34e2d1989a1dbf75cd631596133ee5ee">
+        <source>Video</source>
+        <target>Video</target>
+      </trans-unit>
+      <trans-unit id="af8cf361453a5eeb82477c3798147aa3">
+        <source>MP4 or WebM up to %size% MB, landscape 16:9, without sound; a few seconds is enough. The first frame becomes the photo shown until the video loads.</source>
+        <target>MP4 or WebM up to %size% MB, landscape 16:9, without sound; a few seconds is enough. The first frame becomes the photo shown until the video loads.</target>
+      </trans-unit>
+      <trans-unit id="1b1b04e31b8f52e24811470c962b15bb">
+        <source>Current video: %file%.</source>
+        <target>Current video: %file%.</target>
+      </trans-unit>
+      <trans-unit id="9507c9177b58e5b888608239f7f2b82b">
+        <source>Remove the video</source>
+        <target>Remove the video</target>
+      </trans-unit>
+      <trans-unit id="cb8b86a2fe11c75acfc723602b047c62">
+        <source>The slide keeps its photo.</source>
+        <target>The slide keeps its photo.</target>
+      </trans-unit>
+      <trans-unit id="c03d53b70feba4ea842510abecd6c45e">
+        <source>Photo</source>
+        <target>Photo</target>
+      </trans-unit>
+      <trans-unit id="53b9c0a13da4ee73117ed935ea81df5f">
+        <source>JPG, PNG or WEBP up to 8 MB, landscape 16:9 or wider. Keep the subject on the right – the text sits on the left. With a video, a photo chosen here replaces the first frame.</source>
+        <target>JPG, PNG or WEBP up to 8 MB, landscape 16:9 or wider. Keep the subject on the right – the text sits on the left. With a video, a photo chosen here replaces the first frame.</target>
+      </trans-unit>
+      <trans-unit id="1af4e758e30822030de54a1b3051df53">
+        <source>Longest video time</source>
+        <target>Longest video time</target>
+      </trans-unit>
+      <trans-unit id="22c888ef585336db8fdfdc02779e3cc6">
+        <source>Empty: the slide moves on when the video ends. A number: after that many seconds at most.</source>
+        <target>Empty: the slide moves on when the video ends. A number: after that many seconds at most.</target>
+      </trans-unit>
+      <trans-unit id="bc094dc5e201161ed18a521dc04ca59b">
+        <source>Edit slide</source>
+        <target>Edit slide</target>
+      </trans-unit>
+      <trans-unit id="006258506d401e42b3491b6f73a68960">
+        <source>New slide</source>
+        <target>New slide</target>
+      </trans-unit>
+      <trans-unit id="07fc7dc79c8046bb36d97b4332dab1ca">
+        <source>Back to the list</source>
+        <target>Back to the list</target>
+      </trans-unit>
+      <trans-unit id="a8d90ed8f17c347c8d46e0ef22c85ecb">
+        <source>Slides</source>
+        <target>Slides</target>
+      </trans-unit>
+      <trans-unit id="232df6779ed585fc66a7ac8e3f54a852">
+        <source>Add a slide</source>
+        <target>Add a slide</target>
+      </trans-unit>
+      <trans-unit id="52f5e0bc3859bc5f5e25130b6c7e8881">
+        <source>Position</source>
+        <target>Position</target>
+      </trans-unit>
+      <trans-unit id="a1fa27779242b4902f7ae3bdd5c6d508">
+        <source>Type</source>
+        <target>Type</target>
+      </trans-unit>
+      <trans-unit id="f77af7695f71323808f9b6e2795cde86">
+        <source>Move up</source>
+        <target>Move up</target>
+      </trans-unit>
+      <trans-unit id="dd9f0c7e1bb3b749bd423e3544b4a8e3">
+        <source>Move down</source>
+        <target>Move down</target>
+      </trans-unit>
+      <trans-unit id="7dce122004969d56ae2e0245cb754d35">
+        <source>Edit</source>
+        <target>Edit</target>
+      </trans-unit>
+      <trans-unit id="d540e29280dc154dc7e1b46764938c4f">
+        <source>Delete this slide with its files?</source>
+        <target>Delete this slide with its files?</target>
+      </trans-unit>
+      <trans-unit id="f2a6c498fb90ee345d997f888fce3b18">
+        <source>Delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="56647fda9c33a2617527371a5e42d40d">
+        <source>No slides yet. Add the first one – the slider shows on the home page once it has a slide.</source>
+        <target>No slides yet. Add the first one – the slider shows on the home page once it has a slide.</target>
+      </trans-unit>
+      <trans-unit id="4ddaf52f5d3777d3fd23a7c5d078bba7">
+        <source>Shown to</source>
+        <target>Shown to</target>
+      </trans-unit>
+      <trans-unit id="e31ba942030e2fd5248645c78e549d9b">
+        <source>E.g. a slide inviting to open an account only for visitors who are not logged in.</source>
+        <target>E.g. a slide inviting to open an account only for visitors who are not logged in.</target>
+      </trans-unit>
+      <trans-unit id="5b557a94b7ad2082c57fd412a9f255e5">
+        <source>Visitors not logged in</source>
+        <target>Visitors not logged in</target>
+      </trans-unit>
+      <trans-unit id="cce078c8970bfff051ae5cc9f5d5b15e">
+        <source>Logged-in customers</source>
+        <target>Logged-in customers</target>
+      </trans-unit>
+      <trans-unit id="f9ae5e5c44e59f94680af569879f704a">
+        <source>Everyone</source>
+        <target>Everyone</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
