@@ -2,7 +2,7 @@
 <module>
 	<name>m4p_heroslider</name>
 	<displayName><![CDATA[Slider na stronie głównej]]></displayName>
-	<version><![CDATA[1.1.0]]></version>
+	<version><![CDATA[1.2.0]]></version>
 	<description><![CDATA[Slider na całą szerokość strony głównej ze slajdami wideo i zdjęciowymi, które przechodzą same.]]></description>
 	<author><![CDATA[Modules4Presta]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

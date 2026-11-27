@@ -4,6 +4,14 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [semantic versioning](https://semver.org/).
 
+## [1.2.0] - 2026-11-26
+
+### Added
+- "Shop view" per slide: both views, the company view (B2B) or the consumer view (B2C), read from m4p_core; it works
+  together with "Shown to". Without m4p_core every slide is shown in both views. The preloaded first photo follows the
+  same choice.
+- Upgrade from 1.1.x adds the `view` column; existing slides stay shown in both views.
+
 ## [1.1.0] - 2026-11-26
 
 ### Added

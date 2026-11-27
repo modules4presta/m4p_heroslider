@@ -36,7 +36,7 @@
             <td>{if $slide.thumb}<img src="{$slide.thumb|escape:'html':'UTF-8'}" alt="" class="m4p-hero-admin__thumb">{/if}</td>
             <td><a href="{$slide.edit|escape:'html':'UTF-8'}">{$slide.title|escape:'html':'UTF-8'}</a></td>
             <td>{if $slide.video}{l s='Video' d='Modules.M4pheroslider.Admin'}{else}{l s='Photo' d='Modules.M4pheroslider.Admin'}{/if}</td>
-            <td>{$slide.audience|escape:'html':'UTF-8'}</td>
+            <td>{$slide.audience|escape:'html':'UTF-8'}<br><small>{$slide.view|escape:'html':'UTF-8'}</small></td>
             <td class="text-center">
               <a href="{$slide.toggle|escape:'html':'UTF-8'}" class="list-action-enable {if $slide.active}action-enabled{else}action-disabled{/if}">
                 <i class="{if $slide.active}icon-check{else}icon-remove{/if}"></i>

@@ -29,6 +29,7 @@ its own templates, a base stylesheet and a script; colours and fonts come from t
 
 - **Video and photo slides** – a label, a title, a text and up to two buttons per slide, in every language
 - **Audience per slide** – everyone, visitors not logged in or logged-in customers; the preloaded first photo is the first slide of that audience
+- **Shop view per slide** – both views, the company view (B2B) or the consumer view (B2C) from m4p_core, together with the audience; without m4p_core every slide shows in both views
 - **Timing** – a video slide moves on when its video ends or after an optional limit in seconds; a photo slide after the photo slide time (7 s by default); the progress bar of the current slide fills as it plays
 - **First frame, automatically** – when a video is chosen in the back office, the browser captures its first frame and stores it as the slide photo, shown until the video plays; a photo chosen by hand replaces it, and no server tools are needed
 - **Light on the page** – a video loads only when its slide comes up and the next one is preloaded; videos and the photos of later slides wait 1.5 s after the page load
@@ -72,7 +73,7 @@ is rejected. Keep hero videos short and compressed.
 | **Slides** | Add, edit, show or hide, reorder and delete slides. |
 | **Photo slide time** | Seconds a photo slide stays, 3–30. 7 s by default. |
 
-Each slide has: shown, shown to (everyone, visitors not logged in or logged-in customers), label
+Each slide has: shown, shown to (everyone, visitors not logged in or logged-in customers), shop view (both, B2B or B2C), label
 above the title, title (required), text, main and second button (text and address), video (MP4 or
 WebM, landscape 16:9, without sound), photo (JPG, PNG or WEBP, landscape 16:9 or wider, subject on
 the right) and the longest video time.
