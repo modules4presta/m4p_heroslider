@@ -206,6 +206,26 @@
         <source>Everyone</source>
         <target>Everyone</target>
       </trans-unit>
+      <trans-unit id="fde8e576c1d0a974f9623b975789bc71">
+        <source>Shop view</source>
+        <target state="final">Shop view</target>
+      </trans-unit>
+      <trans-unit id="80d131e247be4aba81fc892d54cf0b0d">
+        <source>E.g. a slide about net prices only in the company view. Works together with "Shown to".</source>
+        <target state="final">E.g. a slide about net prices only in the company view. Works together with "Shown to".</target>
+      </trans-unit>
+      <trans-unit id="44fc88bacd34c238d71913ef5dd626c3">
+        <source>Company view (B2B)</source>
+        <target state="final">Company view (B2B)</target>
+      </trans-unit>
+      <trans-unit id="35c86d9b38808af483afb9bc2741fb5b">
+        <source>Consumer view (B2C)</source>
+        <target state="final">Consumer view (B2C)</target>
+      </trans-unit>
+      <trans-unit id="c53c5362210838f01a9c897ec34a42c0">
+        <source>Both views</source>
+        <target state="final">Both views</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

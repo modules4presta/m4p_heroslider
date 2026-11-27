@@ -20,6 +20,7 @@ return [
         `video` VARCHAR(64) NOT NULL DEFAULT \'\',
         `max_seconds` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
         `audience` VARCHAR(16) NOT NULL DEFAULT \'all\',
+        `view` VARCHAR(8) NOT NULL DEFAULT \'both\',
         `date_add` DATETIME NOT NULL,
         `date_upd` DATETIME NOT NULL,
         PRIMARY KEY (`id_m4p_heroslider_slide`),

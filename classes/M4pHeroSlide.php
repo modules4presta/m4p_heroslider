@@ -22,6 +22,10 @@ class M4pHeroSlide extends ObjectModel
     public const AUDIENCE_GUESTS = 'guests';
     public const AUDIENCE_CUSTOMERS = 'customers';
     public const AUDIENCES = [self::AUDIENCE_ALL, self::AUDIENCE_GUESTS, self::AUDIENCE_CUSTOMERS];
+    public const VIEW_BOTH = 'both';
+    public const VIEW_B2B = 'b2b';
+    public const VIEW_B2C = 'b2c';
+    public const VIEWS = [self::VIEW_BOTH, self::VIEW_B2B, self::VIEW_B2C];
 
     public $id_shop;
     public $position = 0;
@@ -30,6 +34,7 @@ class M4pHeroSlide extends ObjectModel
     public $video = '';
     public $max_seconds = 0;
     public $audience = self::AUDIENCE_ALL;
+    public $view = self::VIEW_BOTH;
     public $date_add;
     public $date_upd;
 
@@ -53,6 +58,7 @@ class M4pHeroSlide extends ObjectModel
             'video' => ['type' => self::TYPE_STRING, 'validate' => 'isFileName', 'size' => 64],
             'max_seconds' => ['type' => self::TYPE_INT, 'validate' => 'isUnsignedInt'],
             'audience' => ['type' => self::TYPE_STRING, 'validate' => 'isGenericName', 'size' => 16],
+            'view' => ['type' => self::TYPE_STRING, 'validate' => 'isGenericName', 'size' => 8],
             'date_add' => ['type' => self::TYPE_DATE, 'validate' => 'isDate'],
             'date_upd' => ['type' => self::TYPE_DATE, 'validate' => 'isDate'],
             'kicker' => ['type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isGenericName', 'size' => 64],
@@ -93,15 +99,20 @@ class M4pHeroSlide extends ObjectModel
      *
      * @return array<int, array<string, mixed>>
      */
-    public static function getSlides(int $idShop, int $idLang, bool $activeOnly, ?string $audience = null): array
+    /**
+     * @param string|null $audience guests or customers: slides for everyone and for that audience; null: every slide
+     * @param string|null $view b2b or b2c: slides for both views and for that view; null: every slide
+     */
+    public static function getSlides(int $idShop, int $idLang, bool $activeOnly, ?string $audience = null, ?string $view = null): array
     {
         $forAudience = $audience === null ? '' : ' AND s.`audience` IN (\'' . self::AUDIENCE_ALL . '\', \'' . pSQL($audience) . '\')';
+        $forView = $view === null ? '' : ' AND s.`view` IN (\'' . self::VIEW_BOTH . '\', \'' . pSQL($view) . '\')';
 
         return Db::getInstance()->executeS('SELECT s.*, sl.*
             FROM `' . _DB_PREFIX_ . self::TABLE . '` s
             LEFT JOIN `' . _DB_PREFIX_ . self::TABLE . '_lang` sl
                 ON sl.`id_m4p_heroslider_slide` = s.`id_m4p_heroslider_slide` AND sl.`id_lang` = ' . $idLang . '
-            WHERE s.`id_shop` = ' . $idShop . ($activeOnly ? ' AND s.`active` = 1' : '') . $forAudience . '
+            WHERE s.`id_shop` = ' . $idShop . ($activeOnly ? ' AND s.`active` = 1' : '') . $forAudience . $forView . '
             ORDER BY s.`position` ASC, s.`id_m4p_heroslider_slide` ASC') ?: [];
     }
 

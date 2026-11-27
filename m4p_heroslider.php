@@ -20,12 +20,14 @@ class M4p_heroslider extends Module
     public const CONFIG_PHOTO_SECONDS = 'M4P_HEROSLIDER_PHOTO_SECONDS';
     private const DEFAULT_PHOTO_SECONDS = 7;
     private const LANG_FIELDS = ['kicker', 'title', 'text', 'cta_text', 'cta_url', 'cta2_text', 'cta2_url'];
+    /** Module that tells the shop view (company or consumer); without it every slide is shown in both views. */
+    private const CORE_MODULE = 'm4p_core';
 
     public function __construct()
     {
         $this->name = 'm4p_heroslider';
         $this->tab = 'front_office_features';
-        $this->version = '1.1.0';
+        $this->version = '1.2.0';
         $this->author = 'Modules4Presta';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -141,6 +143,8 @@ class M4p_heroslider extends Module
         $slide->max_seconds = max(0, min(600, (int) Tools::getValue('max_seconds')));
         $audience = (string) Tools::getValue('audience');
         $slide->audience = in_array($audience, M4pHeroSlide::AUDIENCES, true) ? $audience : M4pHeroSlide::AUDIENCE_ALL;
+        $view = (string) Tools::getValue('view');
+        $slide->view = in_array($view, M4pHeroSlide::VIEWS, true) ? $view : M4pHeroSlide::VIEW_BOTH;
 
         $errors = [];
         if (Tools::getValue('remove_video')) {
@@ -222,6 +226,7 @@ class M4p_heroslider extends Module
                 'video' => (string) $row['video'] !== '',
                 'active' => (bool) $row['active'],
                 'audience' => $this->audienceLabel((string) $row['audience']),
+                'view' => $this->viewLabel((string) $row['view']),
                 'edit' => $this->adminUrl(['id_slide' => $id]),
                 'toggle' => $this->adminUrl(['id_slide' => $id, 'toggleSlide' => 1]),
                 'up' => $this->adminUrl(['id_slide' => $id, 'moveSlide' => 1, 'direction' => -1]),
@@ -268,6 +273,7 @@ class M4p_heroslider extends Module
         $helper->fields_value = [
             'active' => $slideId ? (int) $slide->active : 1,
             'audience' => Tools::getValue('audience', $slide->audience ?: M4pHeroSlide::AUDIENCE_ALL),
+            'view' => Tools::getValue('view', $slide->view ?: M4pHeroSlide::VIEW_BOTH),
             'max_seconds' => (int) $slide->max_seconds ?: '',
             'remove_video' => 0,
         ];
@@ -298,6 +304,13 @@ class M4p_heroslider extends Module
                     return ['id' => $audience, 'name' => $this->audienceLabel($audience)];
                 }, M4pHeroSlide::AUDIENCES), 'id' => 'id', 'name' => 'name'],
                 'desc' => $this->trans('E.g. a slide inviting to open an account only for visitors who are not logged in.', [], 'Modules.M4pheroslider.Admin'),
+            ],
+            [
+                'type' => 'select', 'name' => 'view', 'label' => $this->trans('Shop view', [], 'Modules.M4pheroslider.Admin'),
+                'options' => ['query' => array_map(function (string $view): array {
+                    return ['id' => $view, 'name' => $this->viewLabel($view)];
+                }, M4pHeroSlide::VIEWS), 'id' => 'id', 'name' => 'name'],
+                'desc' => $this->trans('E.g. a slide about net prices only in the company view. Works together with "Shown to".', [], 'Modules.M4pheroslider.Admin'),
             ],
             $text('kicker', $this->trans('Label above the title', [], 'Modules.M4pheroslider.Admin'), $this->trans('One or two words, e.g. "Season".', [], 'Modules.M4pheroslider.Admin')),
             $text('title', $this->trans('Title', [], 'Modules.M4pheroslider.Admin')),
@@ -345,6 +358,18 @@ class M4p_heroslider extends Module
                 return $this->trans('Logged-in customers', [], 'Modules.M4pheroslider.Admin');
             default:
                 return $this->trans('Everyone', [], 'Modules.M4pheroslider.Admin');
+        }
+    }
+
+    private function viewLabel(string $view): string
+    {
+        switch ($view) {
+            case M4pHeroSlide::VIEW_B2B:
+                return $this->trans('Company view (B2B)', [], 'Modules.M4pheroslider.Admin');
+            case M4pHeroSlide::VIEW_B2C:
+                return $this->trans('Consumer view (B2C)', [], 'Modules.M4pheroslider.Admin');
+            default:
+                return $this->trans('Both views', [], 'Modules.M4pheroslider.Admin');
         }
     }
 
@@ -445,7 +470,8 @@ class M4p_heroslider extends Module
     }
 
     /**
-     * Active slides for the current visitor: those for everyone and those for guests or for logged-in customers.
+     * Active slides for the current visitor: by audience (everyone, guests or logged-in customers) and by shop view
+     * (both, company or consumer).
      *
      * @return array<int, array<string, mixed>>
      */
@@ -453,6 +479,18 @@ class M4p_heroslider extends Module
     {
         $audience = $this->context->customer->isLogged() ? M4pHeroSlide::AUDIENCE_CUSTOMERS : M4pHeroSlide::AUDIENCE_GUESTS;
 
-        return M4pHeroSlide::getSlides((int) $this->context->shop->id, (int) $this->context->language->id, true, $audience);
+        return M4pHeroSlide::getSlides((int) $this->context->shop->id, (int) $this->context->language->id, true, $audience, $this->shopView());
+    }
+
+    /**
+     * b2b or b2c from m4p_core; null without it, so every slide counts as shown in both views.
+     */
+    private function shopView(): ?string
+    {
+        if (!Module::isEnabled(self::CORE_MODULE) || !Module::getInstanceByName(self::CORE_MODULE) || !class_exists('M4pCoreShopMode')) {
+            return null;
+        }
+
+        return M4pCoreShopMode::current($this->context) === M4pCoreShopMode::B2C ? M4pHeroSlide::VIEW_B2C : M4pHeroSlide::VIEW_B2B;
     }
 }
